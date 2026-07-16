@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{% block title %}My Flask App{% endblock %}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-       <nav>
-            <class="navbar">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/login">login</a>
-            </class>
-        </nav>
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-        </div>    
-    </body>
+<head>
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/login">Login</a>
+    </nav>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="bottom">
+        {% block bottom %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

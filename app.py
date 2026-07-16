@@ -1,6 +1,7 @@
 from flask import Flask , render_template,request
  #importing flask module and render_template function
 app = Flask(__name__) #application instance
+
 @app.route('/') #index route
 def home(): #route function
     return render_template("home.html") #rendering the base.html template
@@ -12,6 +13,7 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template("index.html",name="Rithin",age=21)
+
 @app.route('/jinja-basics')
 def home_page():
     user_name = "Rithin"
