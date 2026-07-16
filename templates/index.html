@@ -1,10 +1,13 @@
 <!Doctype html>
 <html>
     <head>
-        <title>My Website</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>My name is {{ name }}</title>
     </head>
     <body>
-        <h1>Welcome to My Website</h1>
+        <h1>my name is {{name}}</h1>
+        <h1>my age {{age}}</h1>
         <p>This is a simple HTML template.</p>
+    <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Sample Image", width="200",height="200">
     </body>
 </html>        
