@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Login Page</title>
-    </head>
-    <body>
+
+    {% extends "base.html" %}
+    {% block title %}
+        Login Page
+    {% endblock %}
+    {% block content %}
         <h1>Login</h1>
         <form action="/login" method="post">
             <label for="username">Username:</label>
@@ -12,4 +12,4 @@
             <input type="password" id="password" name="password" required><br><br>
             <input type="submit" value="Login">
         </form>
-    </body>
+    {% endblock %}
